@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex; /*flex : 1차원방식으로 레이아웃 */
+            /* flex-direction: column-reverse;*/ /* row,column,column-reverse... */
+            /* flex-wrap: wrap; / 컨테이너안에 비해 내용물이 많을때 크기 줄여줌 */
+            
+            /* item 정렬 /flex-start:왼쪽 정렬 flex-end 오른쪽 정렬 
+            space-between : item 사이만 여백 / space-evenly :양쪽 끝도 균등하게 여백*/
+            /* justify-content: space-between; */
+            align-items: flex-start; /* container 크기에 맞춰진 item 안늘어남 flex-start,flex-end,center*/
+            width: 300px;
+            height: 200px;
+            background-color: #c4c4c4;
+            border: 1px solid black
+        }
+        .item{
+            background-color: #ff5252;
+            color: white;
+        }
+        .item:nth-child(2n){
+            background-color: #bf5e5e;
+        }
+        .item:nth-child(1){
+            align-self: flex-end; /* 본인만 위치변경 가능 */
+        }
+        .item:nth-child(2){
+            align-self: flex-start;
+        }
+        .item:nth-child(3){
+            align-self: center;
+        }
+        .item:nth-child(4){
+            align-self: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">item-1</div>
+        <div class="item">item-2</div>
+        <div class="item">item-3</div>
+        <div class="item">item-4</div>
+        
+        
+    </div>
+</body>
+</html>

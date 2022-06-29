@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <!-- action : 전달할 url / method : 전달하는 방법 
+    method get - 보안취약,데이터량 한계, querystring / 보통 post(패킷) 사용-->
+    <form action="전달할 url" method="post">
+        <!-- name : 입력 받은값 파라메터라고 부름 백엔드로 넘김 -->
+        <label for="memName">이름 :</label> 
+        <!-- <label> for 와 <input> id 가 상호작용--> 
+        <input type="text" id="memName"name="memName" maxlength="10" placeholder="이름을 입력하세요"> 
+        <br>
+        <label for="memAge">나이 :</label> 
+        <input type="text" id="memAge"name="memAge" maxlength="3"  placeholder="나이를 입력하세요"> 
+        <br>
+        성별 :<!-- value 값이 서버로 이동 / checked =초기에 체크되어있음-->
+        <input type="radio" name="memMG" value="남자" >남자
+        <input type="radio" name="memMG" value="여자" >여자
+        <br>
+        전화번호 : <!-- selected : 초기에 설정된 값 /size : 보여지는 옵션 갯수
+                    multiple : 여러개 선택(ctrl 누르고)-->
+        <select name="memFirst" size="1" multiple>
+            <option value="062">062</option>
+            <option value="063" selected>063</option>
+            <option value="064">064</option>
+        </select>
+        <input type="text" name="memTel" placeholder="전화번호를 입력하세요">
+        <br>
+        관심분야 :<!-- name 이 달라야 중복가능 -->
+        <input type="checkbox" name="habby1" value="IT">IT
+        <input type="checkbox" name="habby2" value="Mobile">Mobile
+        <input type="checkbox" name="habby3" value="Programming">Programming
+        <input type="checkbox" name="habby4" value="IoT">IoT
+        <br>
+
+        자기소개 :<!-- textarea: 여러줄 작성할 때 / rows :행의 갯수 cols :열의 갯수-->
+        <textarea rows="10" cols="50" name="memContent"></textarea>
+        <br>
+        
+        <!--type="reset","submit": (form이 있을 때)form 안에 모든 파라메터 리셋/전송-->
+        <input type="submit" value="가입">
+        <input type="reset" value="취소">
+        <br><br><!-- <button> : form안에 있어야 전송 (type을 걸어야 제대로 작동) input,button 동일 -->
+        <button type="submit">가입</button>
+        <button type="reset">취소</button>
+        <Br>
+
+        <fieldset style="width: 380px; height: 100px;">
+            <legend>피자 사이즈</legend>
+            <input type="radio" name="pSize" value="small">Small<BR>
+            <input type="radio" name="pSize" value="medium">Medium<bR>
+            <input type="radio" name="pSize" value="large">Large
+        </fieldset> <br>
+
+        배달희망시간 :
+        <input type="time" min="09:00" max="18:00" width="150px">
+        <Br>
+        날짜입력 :
+        <input type="date">
+
+    </form>
+</body>
+</html>
